@@ -8,6 +8,16 @@ berbasis container, jadi bikin container :
 ```
 nginx1 nginx2 nginx3 dan (container untuk controll pusat nya)
 ```
+# struktur-folder
+```plaintext
+|-- src
+|   |-- index.html
+|-- docker-compose.yml
+|-- dockerfile (control nginx)
+|-- nginx-lb.conf (control balancer)
+|-- nginx.conf (parameter config nginx)
+```
+
 # ini adalah ilmu devops
 ```
 HAPPY CODINGG!!!
