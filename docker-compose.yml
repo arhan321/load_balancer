@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  nginx1:
+    build: .
+    image: nginx:latest
+    container_name: nginx1
+    volumes:
+      - ./src:/usr/share/nginx/html/src
+
+  nginx2:
+    build: .
+    image: nginx:latest
+    container_name: nginx2
+    volumes:
+      - ./src:/usr/share/nginx/html/src
+
+  nginx3:
+    build: .
+    image: nginx:latest
+    container_name: nginx3
+    volumes:
+      - ./src:/usr/share/nginx/html/src
+
+  load_balancer:
+    image: nginx:latest
+    container_name: load_balancer
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx-lb.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - nginx1
+      - nginx2
+      - nginx3
