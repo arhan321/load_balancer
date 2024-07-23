@@ -13,7 +13,7 @@ nginx1 nginx2 nginx3 dan (container untuk controll pusat nya)
 |-- src
 |   |-- index.html
 |-- docker-compose.yml
-|-- dockerfile (control nginx)
+|-- dockerfile (pull depedencies)
 |-- nginx-lb.conf (control balancer)
 |-- nginx.conf (parameter config nginx)
 ```
